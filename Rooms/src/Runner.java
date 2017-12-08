@@ -7,7 +7,7 @@ public class Runner {
 	
 	public static void main(String[] args)
 	{
-		Room[][] building = new Room[5][5];
+		Room[][] building = new Room[5][10];
 		
 		//Fill the building with normal rooms
 		for (int x = 0; x<building.length; x++)
@@ -18,15 +18,32 @@ public class Runner {
 			}
 		}
 		
+		//Tina's room
+		int a = 3;
+		int b = 3;
+		building[a][b] = new Tina(a,b);
+		
+		//Bathroom
+		int c = 1;
+		int d = 4;
+		building[c][d] = new Bathroom(c,d);
+		
+		//Livingroom
+		int e = 4;
+		int f = 6;
+		building[e][f] = new LivingRoom(e,f);
+		
 		//Create a random winning room.
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
 		building[x][y] = new WinningRoom(x, y);
 		 
 		 //Setup player 1 and the input scanner
+		System.out.println("You have woken up in middle of your house, trying to find your bed as sleepy as you are.");
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
 		building[0][0].enterRoom(player1);
 		Scanner in = new Scanner(System.in);
+		
 		while(gameOn)
 		{
 			System.out.println("Where would you like to move? (Choose N, S, E, W)");
