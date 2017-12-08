@@ -15,6 +15,7 @@ public class Tina extends Room
 		x.setyLoc(this.yLoc);
 	}
 	
+	
 	public void leaveRoom(Person x)
 	{
 		occupant = null;
