@@ -8,6 +8,7 @@ public class Room {
 		xLoc = x;
 		yLoc = y;
 	}
+	
 	public void enterRoom(Person x)
 	{
 		System.out.println("You enter a plain old room");

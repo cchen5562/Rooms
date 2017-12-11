@@ -6,6 +6,7 @@ public class LivingRoom extends Room
 		super(x, y);
 		// TODO Auto-generated constructor stub
 	}
+	
 	public void enterRoom(Person x)
 	{
 		System.out.println("You enter the livingroom.");
